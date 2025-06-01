@@ -1,6 +1,6 @@
 export const project = `
    <div class="video-container">
-<video loop>
+<video loop autoplay>
     <source src="/7529-201118756.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
