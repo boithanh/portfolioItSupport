@@ -1,0 +1,344 @@
+@use './../node_modules/locomotive-scroll/dist/locomotive-scroll.css' as *;
+
+@font-face {
+    font-family: ponyheading;
+    src: url(./font/ponyheading.woff2);
+}
+
+@font-face {
+    font-family: ponycontent;
+    src: url(./font/ponycontent.woff2);
+}
+
+@font-face {
+    font-family: ponysubcontent;
+    src: url(./font/ponysubcontent.woff2);
+}
+
+body {
+    font-family: ponycontent;
+    font-weight: lighter;
+}
+
+h1 {
+    font-family: ponysubcontent;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: ponyheading;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+[data-scroll-section] {
+    min-height: 100vh;
+
+    @media screen and (max-width:431px) {
+        min-height: 80vh;
+    }
+}
+
+.banner {
+    span {
+        font-family: ponycontent;
+        font-weight: bolder;
+    }
+
+    b {
+        font-family: ponyheading;
+        font-weight: lighter;
+    }
+
+    .video-container {
+        position: relative;
+        width: 100%;
+        min-height: 100vh;
+
+        @media screen and (max-width:431px) {
+            min-height: 80vh;
+        }
+    }
+
+    video,
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+    }
+}
+
+.skill,
+.experience,
+.expanded-skill {
+    padding: 250px 40px;
+
+    @media screen and (max-width:431px) {
+        padding: 150px 20px;
+    }
+}
+
+.skill {
+
+    span {
+        font-family: ponysubcontent;
+        font-weight: 100;
+    }
+
+    .straight-line {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        left: calc(100% / 2);
+        width: 1px;
+        height: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        animation: shortLong 3s infinite;
+
+        @media screen and (max-width:431px) {
+            top: 0;
+        }
+    }
+
+    .straight-container {
+        position: relative;
+    }
+}
+
+.experience {
+    li {
+        margin-bottom: 20px;
+    }
+
+    span {
+        font-family: ponysubcontent;
+        font-weight: bold;
+    }
+}
+
+.expanded-skill {
+    li {
+        font-family: ponyheading;
+        font-weight: lighter;
+        transform: scaleX(1.5);
+
+        @media screen and (max-width:431px) {
+            transform: none;
+            padding: 0 10px;
+        }
+    }
+
+    h2 {
+        opacity: 0;
+        font-family: ponysubcontent;
+        font-weight: bold;
+        animation: showAndHide 3s infinite;
+        -webkit-animation: showAndHide 3s infinite;
+        animation-delay: 2s;
+        -webkit-animation-delay: 2s;
+    }
+}
+
+.project {
+    color: white;
+    $thick : 3px;
+    $pad : 0.7em;
+    $extra : calc(#{$pad} * 1.2);
+    // $color : #f26522;
+    $color: #fff;
+
+    a {
+        color: white;
+        padding: $pad $extra;
+        display: inline-block;
+        border: $thick solid transparent;
+        position: relative;
+        cursor: pointer;
+        letter-spacing: 0.07em;
+
+        .text {
+            // padding: 0 0.3em;
+            font-family: proxima-nova, monospace;
+            transform: translate3d(0, $pad, 0);
+            display: block;
+            transition: transform 0.4s cubic-bezier(.2, 0, 0, 1) 0.4s;
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            bottom: -$thick;
+            left: $extra;
+            right: $extra;
+            height: $thick;
+            background: $color;
+            // z-index: -1;
+            transition:
+                transform 0.8s cubic-bezier(1, 0, .37, 1) 0.2s,
+                right 0.2s cubic-bezier(.04, .48, 0, 1) 0.6s,
+                left 0.4s cubic-bezier(.04, .48, 0, 1) 0.6s;
+            transform-origin: left;
+        }
+    }
+
+    .line {
+        position: absolute;
+        background: $color;
+
+        &.-right,
+        &.-left {
+            width: $thick;
+            bottom: -$thick;
+            top: -$thick;
+            transform: scale3d(1, 0, 1);
+        }
+
+        &.-top,
+        &.-bottom {
+            height: $thick;
+            left: -$thick;
+            right: -$thick;
+            transform: scale3d(0, 1, 1);
+        }
+
+        &.-right {
+            right: -$thick;
+            transition: transform 0.1s cubic-bezier(1, 0, .65, 1.01) 0.23s;
+            transform-origin: top;
+        }
+
+        &.-top {
+            top: -$thick;
+            transition: transform 0.08s linear 0.43s;
+            transform-origin: left;
+        }
+
+        &.-left {
+            left: -$thick;
+            transition: transform 0.08s linear 0.51s;
+            transform-origin: bottom;
+        }
+
+        &.-bottom {
+            bottom: -$thick;
+            transition: transform 0.3s cubic-bezier(1, 0, .65, 1.01);
+            transform-origin: right;
+        }
+    }
+
+    a:hover,
+    a:active {
+
+        .text {
+            transform: translate3d(0, 0, 0);
+            transition: transform 0.6s cubic-bezier(.2, 0, 0, 1) 0.4s;
+        }
+
+        &:after {
+            transform: scale3d(0, 1, 1);
+            right: -$thick;
+            left: -$thick;
+            transform-origin: right;
+            transition:
+                transform 0.2s cubic-bezier(1, 0, .65, 1.01) 0.17s,
+                right 0.2s cubic-bezier(1, 0, .65, 1.01),
+                left 0s 0.3s;
+        }
+
+        .line {
+            transform: scale3d(1, 1, 1);
+
+            &.-right {
+                transition: transform 0.1s cubic-bezier(1, 0, .65, 1.01) 0.2s;
+                transform-origin: bottom;
+            }
+
+            &.-top {
+                transition: transform 0.08s linear 0.4s;
+                transform-origin: right;
+            }
+
+            &.-left {
+                transition: transform 0.08s linear 0.48s;
+                transform-origin: top;
+            }
+
+            &.-bottom {
+                transition: transform 0.5s cubic-bezier(0, .53, .29, 1) 0.56s;
+                transform-origin: left;
+            }
+        }
+
+    }
+
+    video,
+    .overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        background-color: rgba(0, 0, 0, 0.3);
+        box-sizing: border-box;
+    }
+
+    .video-container {
+        width: 100%;
+        min-height: 100vh;
+        position: relative;
+
+        @media screen and (max-width:431px) {
+            min-height: 80vh;
+        }
+    }
+}
+
+
+
+
+@keyframes shortLong {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 630px;
+    }
+}
+
+@keyframes showAndHide {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width:431px) {
+    @keyframes shortLong {
+        0% {
+            opacity: 0;
+            height: 0;
+        }
+
+        100% {
+            opacity: 1;
+            height: 380px;
+        }
+    }
+}
