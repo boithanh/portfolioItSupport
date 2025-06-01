@@ -1,7 +1,7 @@
 export const project = `
    <div class="video-container">
 <video loop>
-    <source src="/src/videos/7529-201118756.mp4" type="video/mp4">
+    <source src="/7529-201118756.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <div class="overlay mx-auto flex justify-center justify-items-center flex-col">

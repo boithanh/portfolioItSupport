@@ -1,7 +1,7 @@
 export const banner = `
      <div class="video-container">
-  <video loop>
-    <source src="/src/videos/74933-554074594_small.mp4" type="video/mp4">
+  <video loop autoplay>
+    <source src="/74933-554074594_small.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <div class="overlay flex justify-center justify-items-center flex-col mx-auto">
