@@ -1,4 +1,4 @@
-export function banner() {
+export const banner = () => {
   let banner = ``;
   if (navigator.userAgent.includes('Zalo')) {
     return `<div class="video-container">
