@@ -1,6 +1,6 @@
 import './style.scss'
 import LocomotiveScroll from 'locomotive-scroll';
-import { banner } from '../public/banner';
+import { banner } from './js/banner';
 import { skill } from './js/skill';
 import { experience } from './js/experience';
 import { expandSkill } from './js/expandSkill';

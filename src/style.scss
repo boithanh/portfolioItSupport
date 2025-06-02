@@ -38,8 +38,10 @@ h6 {
 
 [data-scroll-section] {
     min-height: 100vh;
+}
 
-    @media screen and (max-width:431px) {
+@media screen and (max-width:431px) {
+    [data-scroll-section]:first-of-type {
         min-height: 80vh;
     }
 }
@@ -73,7 +75,7 @@ h6 {
         top: 0;
         left: 0;
         object-fit: cover;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.4);
         box-sizing: border-box;
     }
 }
@@ -84,7 +86,7 @@ h6 {
     padding: 250px 40px;
 
     @media screen and (max-width:431px) {
-        padding: 150px 20px;
+        padding: 80px 20px;
     }
 }
 
@@ -130,7 +132,6 @@ h6 {
     li {
         font-family: ponyheading;
         font-weight: lighter;
-        transform: scaleX(1.5);
 
         @media screen and (max-width:431px) {
             transform: none;
@@ -154,7 +155,6 @@ h6 {
     $thick : 3px;
     $pad : 0.7em;
     $extra : calc(#{$pad} * 1.2);
-    // $color : #f26522;
     $color: #fff;
 
     a {
@@ -297,10 +297,6 @@ h6 {
         width: 100%;
         min-height: 100vh;
         position: relative;
-
-        @media screen and (max-width:431px) {
-            min-height: 80vh;
-        }
     }
 }
 
@@ -315,7 +311,7 @@ h6 {
 
     100% {
         opacity: 1;
-        height: 630px;
+        height: calc(13vh + 47vh);
     }
 }
 
@@ -326,19 +322,5 @@ h6 {
 
     50% {
         opacity: 1;
-    }
-}
-
-@media screen and (max-width:431px) {
-    @keyframes shortLong {
-        0% {
-            opacity: 0;
-            height: 0;
-        }
-
-        100% {
-            opacity: 1;
-            height: 380px;
-        }
     }
 }
