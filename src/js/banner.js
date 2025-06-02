@@ -1,8 +1,7 @@
 export const banner = () => {
-  let banner = ``;
   if (navigator.userAgent.includes('Zalo')) {
     return `<div class="video-container">
- <img src="/fallbackBanner.jpg" alt="IT Portfolio Preview" />
+ <img src="/fallbackBanner.jpg" alt="IT Banner Preview" />
   <div class="overlay flex justify-center justify-items-center flex-col mx-auto">
     <div class="max-sm:w-full sm:w-7/12 mx-auto text-center">
       <h1 class="mb-4 text-white max-sm:text-3xl sm:text-5xl">Reliable <span>IT Help Desk Support</span>
@@ -16,7 +15,7 @@ export const banner = () => {
   }
   return `<div class="video-container">
   <video autoplay muted playsinline loop>
-    <source src="/74933-554074594_smallll.mp4" type="video/mp4">
+    <source src="/74933-554074594_small.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
   <div class="overlay flex justify-center justify-items-center flex-col mx-auto">
