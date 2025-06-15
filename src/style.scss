@@ -79,7 +79,7 @@ h6 {
         top: 0;
         left: 0;
         object-fit: cover;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.7);
         box-sizing: border-box;
     }
 
@@ -115,10 +115,14 @@ h6 {
         width: 1px;
         height: 0;
         background-color: rgba(0, 0, 0, 0.3);
-        animation: shortLong 3s infinite;
+        animation: shortLong1 3s infinite;
 
         @media screen and (max-width:431px) {
             top: 0;
+        }
+
+        @media (min-width: 599px) and (max-width: 601px) {
+            animation: shortLong2 3s infinite;
         }
     }
 
@@ -299,7 +303,7 @@ h6 {
         top: 0;
         left: 0;
         object-fit: cover;
-        background-color: rgba(0, 0, 0, 0.3);
+        background-color: rgba(0, 0, 0, 0.5);
         box-sizing: border-box;
     }
 
@@ -327,7 +331,31 @@ h6 {
 
     100% {
         opacity: 1;
-        height: calc(13vh + 47vh);
+        height: calc(520px);
+    }
+}
+
+@keyframes shortLong1 {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: calc(620px);
+    }
+}
+
+@keyframes shortLong2 {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: calc(800px);
     }
 }
 
