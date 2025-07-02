@@ -4,10 +4,10 @@ export const banner = () => {
  <img src="/fallbackBanner.jpg" alt="IT Banner Preview" />
   <div class="overlay flex justify-center justify-items-center flex-col mx-auto">
     <div class="max-sm:w-full md:w-full xl:w-8/12 mx-auto text-center">
-      <h1 class="mb-4 text-white max-sm:text-3xl sm:text-4xl lg:text-5xl">Reliable <span>IT Help Desk Support</span>
-        <br>Providing efficient solutions,
-        <br>technical assistance, <b>&</b> <span> seamless user support</span>
-        <br>to keep systems<span> running smoothly</span>.
+      <h1 class="mb-4 text-white max-sm:text-3xl sm:text-4xl lg:text-5xl">Hi, <span> I'm Thạnh</span>
+        <br>— an IT support specialist
+        <br>with experience in maintaining systems <b>&</b> <span>troubleshooting technical issues </span>
+        <br>for small and medium - sized businesses.</span>.
       </h1>
     </div>
   </div>
@@ -20,12 +20,13 @@ export const banner = () => {
   </video>
   <div class="overlay flex justify-center justify-items-center flex-col mx-auto">
     <div class="max-sm:w-full md:w-full xl:w-8/12 mx-auto text-center">
-      <h1 class="mb-4 text-white max-sm:text-3xl sm:text-4xl lg:text-5xl">Reliable <span>IT Help Desk Support</span>
-        <br>Providing efficient solutions,
-        <br>technical assistance, <b>&</b> <span> seamless user support</span>
-        <br>to keep systems<span> running smoothly</span>.
+      <h1 class="mb-4 text-white max-sm:text-3xl sm:text-4xl lg:text-5xl">Hi, <span> I'm Thạnh</span>
+        <br>— an IT support specialist
+        <br>with experience in maintaining systems <b>&</b> <span>troubleshooting technical issues </span>
+        <br>for small and medium - sized businesses.</span>.
       </h1>
     </div>
   </div>
 </div>`
 };
+

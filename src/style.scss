@@ -112,18 +112,37 @@ h6 {
         position: absolute;
         top: 0;
         left: calc(100% / 2);
-        width: 1px;
+        width: .5px;
         height: 0;
-        background-color: rgba(0, 0, 0, 0.3);
-        animation: shortLong1 3s infinite;
+        background-color: black;
+        animation: shortLong 3s infinite;
+
+
+        @media screen and (max-width:821px) {
+            animation: shortLong1 3s infinite;
+        }
 
         @media screen and (max-width:431px) {
-            top: 0;
-        }
-
-        @media (min-width: 599px) and (max-width: 601px) {
             animation: shortLong2 3s infinite;
         }
+
+        @media screen and (max-width:415px) {
+            animation: shortLong3 3s infinite;
+        }
+
+        @media screen and (max-width:391px) {
+            animation: shortLong4 3s infinite;
+        }
+
+        @media screen and (max-width:376px) {
+            animation: shortLong5 3s infinite;
+        }
+
+        @media screen and (orientation: landscape) {
+
+            animation: shortLong1 3s infinite;
+        }
+
     }
 
     .straight-container {
@@ -153,14 +172,22 @@ h6 {
         }
     }
 
-    h2 {
-        opacity: 0;
+
+    .border-custom {
+        border: 2px dotted transparent;
         font-family: ponysubcontent;
         font-weight: bold;
-        animation: showAndHide 3s infinite;
-        -webkit-animation: showAndHide 3s infinite;
-        animation-delay: 2s;
-        -webkit-animation-delay: 2s;
+        animation: showAndHide 2.5s infinite;
+        -webkit-animation: showAndHide 2.5s infinite;
+        animation-delay: 3s;
+        -webkit-animation-delay: 3s;
+
+        @media screen and (max-width: 431px) {
+            animation: showAndHide 3s infinite;
+            -webkit-animation: showAndHide 3s infinite;
+            animation-delay: 4s;
+            -webkit-animation-delay: 4s;
+        }
     }
 }
 
@@ -331,7 +358,7 @@ h6 {
 
     100% {
         opacity: 1;
-        height: calc(520px);
+        height: 525px
     }
 }
 
@@ -343,7 +370,7 @@ h6 {
 
     100% {
         opacity: 1;
-        height: calc(620px);
+        height: 500px;
     }
 }
 
@@ -355,16 +382,52 @@ h6 {
 
     100% {
         opacity: 1;
-        height: calc(800px);
+        height: 553px;
+    }
+}
+
+@keyframes shortLong3 {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 517px;
+    }
+}
+
+@keyframes shortLong4 {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 464px;
+    }
+}
+
+@keyframes shortLong5 {
+    0% {
+        opacity: 0;
+        height: 0;
+    }
+
+    100% {
+        opacity: 1;
+        height: 288px;
     }
 }
 
 @keyframes showAndHide {
     0% {
-        opacity: 0;
+        border-color: transparent;
     }
 
     50% {
-        opacity: 1;
+        border-color: black;
     }
 }

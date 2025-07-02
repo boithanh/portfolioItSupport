@@ -1,6 +1,6 @@
 export const expandSkill = `
 <div class="container mx-auto flex">
-  <div class="max-sm:w-full sm:w-10/12 justify-items-center mx-auto md:pl-20 md:pr-3">
+  <div class="border-custom p-5 max-sm:w-full sm:w-10/12 justify-items-center mx-auto">
     <h2 class="max-sm:text-3xl sm:text-5xl mb-3 z-5">Expaned Skills</h2>
     <ul class="max-sm:text-2xl sm:text-4xl max-sm:leading-10 sm:leading-20 mb-3">
       <li>Communication tools: MS Teams, Slack</li>
